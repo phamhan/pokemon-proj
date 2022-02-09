@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  apriRoot: 'https://pokeapi.co/api/v2/',
 };

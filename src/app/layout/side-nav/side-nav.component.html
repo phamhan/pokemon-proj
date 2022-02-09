@@ -1,0 +1,48 @@
+<div class="side-nav">
+    <div class="menu">
+        <div class="content">
+          <div class="sub-menu cursor-pointer"
+               routerLinkActive="active-dashboard"
+               [routerLink]="['home']">
+            <a class="mat-menu-item custom-mat-menu-item child-item">
+            <mat-icon aria-hidden="false">home</mat-icon>
+              <p class="text-menu">Home</p>
+            </a>
+          </div>
+    
+          <mat-expansion-panel class="custom-mat-expansion-panel balance-menu"
+                               [expanded]="currentLink === 'games'"
+                               #balance="matExpansionPanel"
+                               [ngClass]="{ 'is-expanded': balance.expanded }">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <a [ngClass]="{ 'is-text-white': balance.expanded }"
+                   class="mat-menu-item custom-mat-menu-item child-item"
+                   routerLinkActive="is-active"
+                   [routerLinkActiveOptions]="{ exact: true }">
+                   <mat-icon aria-hidden="false">games</mat-icon>
+                  <p>Games</p>
+                </a>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+    
+            <!-- <ng-container *ngFor="let wallet of applicationWalletSort">
+              <div class="child-menu cursor-pointer"
+                   routerLinkActive="active-page"
+                   [routerLink]="[
+                  wallet.applicationWalletName.toLowerCase() + '/balance'
+                ]"
+                   [queryParams]="{ selectedWallet: wallet.applicationWalletId }">
+                <a class="mat-menu-item custom-mat-menu-item has-border-bottom">
+                  <span class="wallet text-white">
+                    {{
+                      "sidenav." + wallet.applicationWalletName | translate
+                    }}</span>
+                </a>
+              </div>
+            </ng-container> -->
+          </mat-expansion-panel>
+    
+        </div>
+      </div>
+</div>
