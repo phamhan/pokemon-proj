@@ -5,5 +5,21 @@ export const pageSizeDefault = 20;
 
 export const pageOptionDefault = {
     pageSize: pageSizeDefault,
-    pageSizeOptions
+    pageSizeOptions,
+    pageIndex: 0,
+};
+
+export const PokemonColors = {
+    [0]: {
+        type: 'primary'
+    },
+    [1]: {
+        type: 'purple'
+    },
+    [2]: {
+        type: 'red'
+    },
+    [3]: {
+        type: 'warm'
+    }
 };

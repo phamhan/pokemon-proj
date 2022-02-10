@@ -6,11 +6,14 @@ import { MaterialModule } from 'src/app/material.module';
 
 @NgModule({
   declarations: [
-    PokemonCardComponent
+    PokemonCardComponent,
   ],
   imports: [
     CommonModule,
     MaterialModule,
+  ],
+  exports: [
+    PokemonCardComponent,
   ]
 })
 export class PokemonCardModule {

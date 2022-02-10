@@ -1,0 +1,22 @@
+.pokemons-list {
+    height: calc(100vh - 135px);
+    overflow: auto;
+    position: relative;
+
+
+    .form-filter {
+        position: sticky;
+        top: 0px;
+        background: white;
+        z-index: 99;
+    }
+
+    .search-form {
+        width: 100%;
+    }
+
+    .pagination {
+        position: sticky;
+        bottom: 0px;
+    }
+}

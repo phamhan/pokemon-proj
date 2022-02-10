@@ -1,9 +1,17 @@
-<div class="flex flex-column">
-    <ng-container *ngIf="listResult.results">
-        <app-pokemon-list [pokemons]="listResult.results"></app-pokemon-list>
+<p class="p-4 font-bold text-xl capitalize" *ngIf="routerFragment">{{routerFragment}}</p>
+<div class="pokemons-list">
+    <form class="p-4 form-filter" [formGroup]="form">
+        <mat-form-field class="search-form" appearance="outline">
+            <mat-label>Search by name</mat-label>
+            <input type="text" formControlName="textSearch" matInput placeholder="ex: venusaur">
+            <mat-icon matSuffix >search</mat-icon>
+        </mat-form-field>
+    </form>
+    <ng-container *ngIf="pokemonShow && pokemonShow.length > 0">
+        <app-pokemon-list [pokemons]="pokemonShow"></app-pokemon-list>
     </ng-container>
     
-    <mat-paginator [length]="listResult?.count || 0"
+    <mat-paginator class="pagination" [length]="listResult?.count || 0"
         [pageSize]="pageOptionDefault.pageSize"
         [pageSizeOptions]="pageOptionDefault.pageSizeOptions"
         (page)="pageEvent($event)"

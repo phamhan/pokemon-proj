@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { take } from 'rxjs/operators';
+import { Result } from 'src/app/models';
+import { GamesService } from 'src/app/services/games.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +10,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  gameVersions: Array<Result>;
+  generations: Array<Result>;
+
+  constructor(
+    private gamesService: GamesService) { }
 
   ngOnInit(): void {
+    this.getGameVersions();
+    this.getGenerations();
+  }
+
+  getGameVersions(): void {
+    this.gamesService.getVersions().pipe(take(1)).subscribe(val => {
+      this.gameVersions = val.results;
+    });
+  }
+
+  getGenerations(): void {
+    this.gamesService.getGenerations().pipe(take(1)).subscribe(val => {
+      this.generations = val.results;
+    });
   }
 
 }

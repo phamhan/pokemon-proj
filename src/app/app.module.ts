@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from './layout/layout.module';
-import { MatCarouselModule } from '@ngbmodule/material-carousel';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({

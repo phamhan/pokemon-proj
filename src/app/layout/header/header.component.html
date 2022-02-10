@@ -3,5 +3,26 @@
       class="pokemon-logo"
       src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1280px-International_Pok%C3%A9mon_logo.svg.png"
     />
+    <div class="menu-header flex justify-center">
+      <button class="font-bold text-xl text-white" mat-button [matMenuTriggerFor]="versions">Game Versions</button>
+      <!-- #enddocregion mat-menu-trigger-for -->
+      <mat-menu #versions="matMenu">
+        <ng-container *ngFor="let version of gameVersions">
+          <button mat-menu-item [routerLink]="['pokemons']" [fragment]="version.name">{{ version.name }}</button>
+        </ng-container>
+      </mat-menu>
+
+      <button class="font-bold text-xl text-white" mat-button [matMenuTriggerFor]="gens">Game Generations</button>
+      <!-- #enddocregion mat-menu-trigger-for -->
+      <mat-menu #gens="matMenu">
+        <ng-container *ngFor="let generation of generations">
+          <button mat-menu-item [routerLink]="['pokemons']" [fragment]="generation.name">{{ generation.name }}</button>
+        </ng-container>
+      </mat-menu>
+
+      <button class="font-bold text-xl text-white" mat-button>Locations</button>
+
+      <button class="font-bold text-xl text-white" mat-button>Items</button>
+    </div>
 </mat-toolbar>
   

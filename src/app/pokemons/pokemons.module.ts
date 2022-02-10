@@ -6,6 +6,8 @@ import { MaterialModule } from '../material.module';
 import { PokemonsRoutingModule } from './pokemons-routing.module';
 import { components } from './components';
 import { PokemonCardModule } from '../shared/pokemon-card/pokemon-card.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -16,8 +18,11 @@ import { PokemonCardModule } from '../shared/pokemon-card/pokemon-card.module';
     CommonModule,
     MaterialModule,
     PokemonsRoutingModule,
-    PokemonCardModule
-  ]
+    PokemonCardModule,
+    ReactiveFormsModule,
+    RouterModule,
+    FormsModule,
+  ],
 })
 export class PokemonsModule {
 }

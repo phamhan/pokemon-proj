@@ -1,0 +1,15 @@
+<h1 mat-dialog-title>{{data.title}}</h1>
+<div mat-dialog-content class="p-4 flex">
+    <div class="card">
+        <img [src]="pokemonImage" alt="pokemon image">
+    </div>
+    <div class="card ml-8 capitalize text-base font-bold" >
+        <p> #{{ pokemonDetail?.id }} </p>
+        <p> Name: <span class="font-normal" >{{ pokemonName }}</span> </p>
+        <p> Weight: <span class="font-normal" >{{ pokemonDetail?.weight }} lbs</span> </p>
+        <p> Height: <span class="font-normal" >{{ pokemonDetail?.height }} </span> </p>
+    </div>
+</div>
+<div mat-dialog-actions class="text-right">
+  <button mat-button (click)="onCancel()">Close</button>
+</div>
