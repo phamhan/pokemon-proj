@@ -1,0 +1,11 @@
+<div class="grid grid-cols-5 gap-4 sm:grid-cols-1">
+  <ng-container *ngIf="pokemons && pokemons.length > 0;else noItem">
+
+  </ng-container>
+  <div *ngFor="let pokemon of pokemons; let i = index">
+    <app-pokemon-card [pokemon]="pokemon"></app-pokemon-card>
+  </div>
+  <ng-template #noItem>
+    No result found
+  </ng-template>
+</div>

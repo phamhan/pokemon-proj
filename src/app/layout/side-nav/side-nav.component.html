@@ -42,7 +42,16 @@
               </div>
             </ng-container> -->
           </mat-expansion-panel>
-    
+          
+          <div class="sub-menu cursor-pointer"
+            routerLinkActive="active-dashboard"
+            [routerLink]="['pokemons']">
+            <a class="mat-menu-item custom-mat-menu-item child-item">
+              <mat-icon>videogame_asset</mat-icon>
+              <p class="text-menu">Pokemons</p>
+            </a>
+          </div>
+
         </div>
       </div>
 </div>

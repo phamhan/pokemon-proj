@@ -1,0 +1,12 @@
+<div class="flex flex-column">
+    <ng-container *ngIf="listResult.results">
+        <app-pokemon-list [pokemons]="listResult.results"></app-pokemon-list>
+    </ng-container>
+    
+    <mat-paginator [length]="listResult?.count || 0"
+        [pageSize]="pageOptionDefault.pageSize"
+        [pageSizeOptions]="pageOptionDefault.pageSizeOptions"
+        (page)="pageEvent($event)"
+        aria-label="Select page">
+    </mat-paginator>
+</div>

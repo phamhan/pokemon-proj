@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from './layout/layout.module';
 import { MatCarouselModule } from '@ngbmodule/material-carousel';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,10 +17,11 @@ import { MatCarouselModule } from '@ngbmodule/material-carousel';
     AppRoutingModule,
     BrowserAnimationsModule,
     LayoutModule,
-
-    MatCarouselModule.forRoot(),
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    HttpClientModule
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
