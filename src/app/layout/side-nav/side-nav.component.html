@@ -12,11 +12,11 @@
     
           <mat-expansion-panel class="custom-mat-expansion-panel balance-menu"
                                [expanded]="currentLink === 'games'"
-                               #balance="matExpansionPanel"
-                               [ngClass]="{ 'is-expanded': balance.expanded }">
+                               #games="matExpansionPanel"
+                               [ngClass]="{ 'is-expanded': games.expanded }">
             <mat-expansion-panel-header>
               <mat-panel-title>
-                <a [ngClass]="{ 'is-text-white': balance.expanded }"
+                <a [ngClass]="{ 'is-text-white': games.expanded }"
                    class="mat-menu-item custom-mat-menu-item child-item"
                    routerLinkActive="is-active"
                    [routerLinkActiveOptions]="{ exact: true }">

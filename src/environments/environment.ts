@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  apriRoot: 'https://pokeapi.co/api/v2/',
+  apiRoot: 'https://pokeapi.co/api/v2',
+  imgRoot: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites',
 };
 
 /*

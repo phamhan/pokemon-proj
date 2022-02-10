@@ -60,68 +60,6 @@
     }
   }
   
-  .info {
-    height: 384px;
-    background: #046af3;
-    border-radius: 20px;
-    margin: 0 auto;
-    padding-top: 37px;
-  
-    .avatar {
-      width: 112px;
-      height: 112px;
-      border-radius: 50%;
-      margin: 0 auto;
-      background-size: cover;
-      background-repeat: no-repeat;
-      border: 1px solid #f6f6f6;
-      background-position: center;
-      border-radius: 50%;
-    }
-    .hello {
-      font-family: "Roboto", sans-serif;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 16px;
-      color: white;
-      text-align: center;
-      padding-top: 0.5rem;
-    }
-    .user-name {
-      font-family: "Roboto", sans-serif;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 18px;
-      color: white;
-      text-align: center;
-    }
-  
-    .id {
-      padding-left: 19px;
-      padding-top: 19px;
-      .title-id {
-        font-family: "Roboto", sans-serif;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 16px;
-        color: #ffffff;
-      }
-  
-      .value-id {
-        font-family: "Roboto", sans-serif;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 20px;
-        line-height: 23px;
-        color: #ffffff;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
-    }
-  }
-  
   .menu {
     background: #ffffff;
     border-radius: 10px;
@@ -202,6 +140,7 @@
   :host ::ng-deep {
     .mat-expansion-panel {
       border-radius: 0;
+      padding-right: 1rem;
     }
     .mat-expansion-panel-header {
       padding: 0;
@@ -215,11 +154,6 @@
       padding: 0;
       display: flex;
       align-items: center;
-      img {
-        height: 21.5px;
-        width: 21.5px;
-        margin-right: 1rem;
-      }
   
       p {
         font-family: "Roboto", sans-serif;
@@ -228,6 +162,7 @@
         font-size: 1rem;
         line-height: 23px;
         padding-left: 23px;
+         margin: 0px;
       }
   
       border-color: white !important;

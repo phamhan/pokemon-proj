@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { HomeRoutingModule } from './home-routing.module';
 import { containers } from './containers';
 import { MaterialModule } from '../material.module';
-
+import { MatCarouselModule } from '@ngbmodule/material-carousel';
 
 @NgModule({
   declarations: [
@@ -14,6 +14,7 @@ import { MaterialModule } from '../material.module';
     CommonModule,
     MaterialModule,
     HomeRoutingModule,
+    MatCarouselModule.forRoot(),
 
   ]
 })
